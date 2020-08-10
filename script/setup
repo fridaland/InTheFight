@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+# install project specific version of node and npm
+brew bootstrap-nodenv-node
+nodenv rehash
+
+if [ `which npm` == '' ]; then
+  echo "npm not found. Restart terminal to pick up environment changes"
+  exit 1
+fi
+
+# check for a package.json and then run yarn install
+if [ -f "package.json" ]; then
+  echo "==> Installing packages..."
+  npm install
+  else
+    # raise error and exit
+    echo "[Error] package.json is missing. Check that this repository has been cloned correctly."
+    exit 1
+fi

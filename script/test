@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+echo "no op"
+echo "no tests in this application yet"
