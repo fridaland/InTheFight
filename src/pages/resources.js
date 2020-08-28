@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/templates/layout"
 
-const IndexPage = () => {
+const Resources = () => {
   return (
     <>
       <Layout />
-      Home
+      Resources
     </>
   )
 }
 
-export default IndexPage
+export default Resources

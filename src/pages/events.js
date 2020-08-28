@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/templates/layout"
 
-const IndexPage = () => {
+const Events = () => {
   return (
     <>
       <Layout />
-      Home
+      Events
     </>
   )
 }
 
-export default IndexPage
+export default Events
