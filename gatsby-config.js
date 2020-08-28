@@ -1,8 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `In The Fight`,
+    description: `In The Fight Norht Brooklyn`,
+    author: `@fridaland`,
+    menuLinks: [
+      {
+        name: `Contact`,
+        url: `/contact`,
+      },
+      {
+        name: `Events`,
+        url: `/events`,
+      },
+      {
+        name: `Resources`,
+        url: `/resources`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
