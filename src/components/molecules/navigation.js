@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import { Styled, css } from "theme-ui"
+import { Styled } from "theme-ui"
 
 export default function Navigation() {
   const data = useStaticQuery(
