@@ -8,16 +8,25 @@ Our members share a unanimous desire to continue organizing and provide opportun
 
 ### Getting Started
 
-After you have cloned this repo, run this setup script to set up your machine with the necessary dependencies to run and test this app:
+#### Dependenciees
+
+We use Homebrew to handle dependencies on MacOS, and the Nix package manager on
+Linux:
+
+#### MacOS
+After you have cloned this repo, run the setup script to set up your machine with the necessary dependencies to run and test this app (uses HomeBrew:
 
 ```
 % ./script/setup
 ```
 
+#### Nix 
+
 Run the server
 
+
 ```
-gatsby develop
+% gatsby develop
 ```
 
 
