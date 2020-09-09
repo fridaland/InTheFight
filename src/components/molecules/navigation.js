@@ -22,7 +22,7 @@ export default function Navigation() {
   return (
     <nav>
       {navLinks.map(link => (
-        <li>
+        <li key={link.name}>
           <Styled.a
             as={Link}
             to={link.url}
