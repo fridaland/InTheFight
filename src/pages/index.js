@@ -12,13 +12,12 @@ class IndexPage extends Component {
       <>
         <Layout />
         {homepageData.map(data => {
-          const title = data.node.title
-          const description = data.node.simpleDescription.simpleDescription
+          const { title, simpleDescription } = data.node
 
           return (
             <div key={data.node.id}>
               <Title text={title} />
-              <Description text={description} />
+              <Description text={simpleDescription.simpleDescription} />
             </div>
           )
         })}

@@ -15,15 +15,15 @@ class Events extends Component {
       <>
         <Layout />
         {eventsData.map(event => {
+          const { id, title, datetime, description } = event.node
           return (
-            <div key={event.node.id} >
-              <Title text={event.node.title} />
-              <DateField date={event.node.datetime} />
-              <Description text={event.node.description.description} />
+            <div key={id} >
+              <Title text={title} />
+              <DateField date={datetime} />
+              <Description text={description.description} />
             </div>
           )
-        })
-        }
+        })}
       </>
     )
   }
