@@ -4,6 +4,10 @@ set -e
 
 cd "$(dirname "$0")/.."
 
+echo "Installing dependencies..."
+
+npm install
+
 echo "Running tests..."
 
 npm test
