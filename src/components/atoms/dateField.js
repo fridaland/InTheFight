@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const DateField = ({date}) => (
-  <p>{date}</p>
+  <p data-testid="date-field">{date}</p>
 )
 
 DateField.propTypes = {
-  text: PropTypes.string,
+  date: PropTypes.string,
 }
 
 export default DateField

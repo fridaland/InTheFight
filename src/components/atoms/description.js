@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Description = ({text}) => (
-  <p>{text}</p>
+  <p data-testid="description">{text}</p>
 )
 
 Description.propTypes = {

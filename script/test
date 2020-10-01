@@ -4,5 +4,10 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-echo "no op"
-echo "no tests in this application yet"
+echo "Installing dependencies..."
+
+npm install
+
+echo "Running tests..."
+
+npm test
