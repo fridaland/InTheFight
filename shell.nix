@@ -4,7 +4,7 @@
 
 (pkgs.buildFHSUserEnv {
   name  = "node-env";
-  targetPkgs = p: with p; [ nodejs nodePackages.npm ]; # ++ deps;
+  targetPkgs = p: with p; [ autoconf automake libtool zlib nodejs nodePackages.npm ]; # ++ deps;
   runScript = ''
     zsh
   '';
