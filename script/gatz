@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+set -eu
+CMD="$@"
+DIR=`realpath $0 | xargs dirname `
+
+cd $DIR/..
+
+nix-shell nix/gatz.nix --argstr gatzCmd "$CMD"

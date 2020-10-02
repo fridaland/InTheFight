@@ -4,6 +4,13 @@ set -e
 
 cd "$(dirname "$0")/.."
 
+
+# If nix isn't installed, assume we want the MacOS approach
+if [ ! $OSTYPE == "darwin"* ]; then
+   echo "The setup script assumes Mac OS. See the README for Linux options"
+   exit 1
+fi
+
 # install project specific version of node and npm
 brew bootstrap-nodenv-node
 nodenv rehash

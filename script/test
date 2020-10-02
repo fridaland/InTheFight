@@ -1,13 +1,21 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -e
 
 cd "$(dirname "$0")/.."
 
-echo "Installing dependencies..."
+# If nix isn't installed, assume we want the MacOS approach
+if [ ! -d /nix/store ]
+then
+    echo "Installing dependencies..."
 
-npm install
+    npm install
 
-echo "Running tests..."
+    echo "Running tests..."
 
-npm test
+    npm test
+
+else
+    echo "Running tests..."
+    script/nix-npm test
+fi

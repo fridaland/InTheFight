@@ -33,18 +33,28 @@ Running the test-suite
 
 #### Linux (via Nix)
 
-To install the Nix package manager, run
+Linux support relies on the nix package manager. To install it, run
 
 ```
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-You can launch a development shell with
+To run gatsby, use script/gatz, which wraps the nix machinery. E.g.,
+```
+% script/gatz develop
+```
+
+You can run tests with
+```
+% script/test
+```
+just as on Mac OS. For npm tasks, use `scripts/nix-npm`. You can get a shell environment with
+node and npm installed by simply running
 ```
 nix-shell
 ```
-
-Note that (currently) to invoke gatsby, you must run, e.g.,
+in the repository root directory. Note that (currently) to invoke gatsby inside the nix shell,
+you must run, e.g.,
 ```
 node_modules/gatsby/cli.js develop
 ```
