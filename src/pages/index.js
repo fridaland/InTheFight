@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/templates/layout"
 import Title from "../components/atoms/title"
 import Description from "../components/atoms/description"
+import HomePageLogo from "../components/molecules/homePageLogo"
 
 class IndexPage extends Component {
   render() {
@@ -11,6 +12,7 @@ class IndexPage extends Component {
     return (
       <>
         <Layout />
+        <HomePageLogo />
         {homepageData.map(data => {
           const { title, simpleDescription } = data.node
 

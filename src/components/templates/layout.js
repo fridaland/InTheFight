@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "../organisms/header"
+import NavBar from "../organisms/navbar"
 
 const Layout = () => {
   const data = useStaticQuery(graphql`
@@ -15,7 +15,7 @@ const Layout = () => {
   `)
 
   return (
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <NavBar siteTitle={data.site.siteMetadata.title} />
   )
 }
 
