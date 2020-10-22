@@ -12,3 +12,15 @@ h1 {
   font-weight: bold;
   font-size: 48px;
 }
+
+.headline{
+font-weight: bold;
+font-size: 48px;
+color: #2C358F;
+}
+
+.homepageparagraph{
+  font-size: 20px;
+  color: #000000;
+}
+

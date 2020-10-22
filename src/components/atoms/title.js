@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Title = ({text}) => (
-  <h1 data-testid="hero-title">{text}</h1>
+  <div class="headline" data-testid="hero-title">{text}</div>  
 )
 
 Title.propTypes = {

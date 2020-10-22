@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Description = ({text}) => (
-  <p data-testid="description">{text}</p>
+  <p class= "homepageparagraph" data-testid="description">{text}</p>
 )
 
 Description.propTypes = {
