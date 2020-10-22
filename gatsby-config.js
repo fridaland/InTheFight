@@ -20,6 +20,10 @@ module.exports = {
         name: `Resources`,
         url: `/resources`,
       },
+      {
+        name: `Blogs`,
+        url: `/blogs`,
+      },
     ],
   },
   plugins: [
