@@ -19,7 +19,7 @@ class IndexPage extends Component {
           const { title, simpleDescription } = data.node
 
           return (
-            <div key={data.node.id}>
+            <div className="headline-container" key={data.node.id}>
               <Title className="headline" text={title} />
               <Description className="headline-description" text={simpleDescription.simpleDescription} />
             </div>
