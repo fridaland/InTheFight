@@ -1,9 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Footer from "../organisms/footer"
 import NavBar from "../organisms/navbar"
 
-const Layout = () => {
+const Layout = ({children}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -15,7 +15,11 @@ const Layout = () => {
   `)
 
   return (
-    <NavBar siteTitle={data.site.siteMetadata.title} />
+    <React.Fragment>
+      <NavBar siteTitle={data.site.siteMetadata.title} />
+        {children}
+      <Footer />
+    </React.Fragment>
   )
 }
 
