@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `In The Fight`,
-    description: `In The Fight Norht Brooklyn`,
+    description: `In The Fight North Brooklyn`,
     author: `@fridaland`,
     menuLinks: [
       {
@@ -15,6 +15,10 @@ module.exports = {
       {
         name: `Events`,
         url: `/events`,
+      },
+      {
+        name: 'Blogs',
+        url: '/blogs',
       },
       {
         name: `Resources`,
