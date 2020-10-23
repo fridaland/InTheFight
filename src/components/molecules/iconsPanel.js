@@ -30,7 +30,7 @@ function IconsPanel() {
       <ClickableIcon img={Twitter}  alt='Twitter'   href="https://twitter.com/inthefightnbk" />
       <ClickableIcon img={Medium}   alt='Medium'  href="https://medium.com/@inthefightnbk" />
       <ClickableIcon img={Facebook}   alt='Facebook'  href="https://www.facebook.com/groups/inthefightnbk" />
-      <ClickableIcon img={Mail}     alt='Mail'    href="mailto:info@inthefight.org"/>
+      <ClickableIcon img={Mail}     alt='Mail'    href="mailto:info@inthefight.org" blank={false}/>
     </Icons>
   )
 }
