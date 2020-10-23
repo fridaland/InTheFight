@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {Link} from "gatsby";
 
 const Icon = styled.img`
-    height: 25px;
+  height: 25px;
 `
 
 function IconsPanel({link, img, href, alt}) {
