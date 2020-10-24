@@ -11,7 +11,7 @@ class IndexPage extends Component {
 
     return (
       <>
-        <Layout />
+        <Layout isHome={true} />
         <HomePageLogo />
         {homepageData.map(data => {
           const { title, simpleDescription } = data.node
@@ -43,4 +43,5 @@ export const homePageQuery = graphql`
         }
       }
     }
-  }`
+  }
+`

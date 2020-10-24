@@ -21,16 +21,15 @@ export default function Navigation() {
 
   return (
     <nav>
-      {navLinks.map(link => (
-        <li key={link.name}>
-          <Styled.a
-            as={Link}
-            to={link.url}
-          >
-            {link.name}
-          </Styled.a>
-        </li>
-      ))}
+      <ul>
+        {navLinks.map(link => (
+          <li key={link.name}>
+            <Styled.a as={Link} to={link.url}>
+              {link.name}
+            </Styled.a>
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }
