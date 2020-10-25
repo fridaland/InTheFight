@@ -16,5 +16,13 @@ const Layout = ({ isHome }) => {
 
   return <NavBar isHome={isHome} siteTitle={data.site.siteMetadata.title} />
 }
+  
+Layout.propTypes = {
+  isHome: PropTypes.Bool,
+}
+
+Layout.defaultProps = {
+  isHome: false,
+}
 
 export default Layout
