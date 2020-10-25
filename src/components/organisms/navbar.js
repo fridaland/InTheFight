@@ -6,7 +6,7 @@ import blueRingImage from "../../images/logos/ring-blue.png"
 
 const NavBar = ({ isHome }) => {
   const [hamburgerState, setHamburgerState] = useState(false)
-  console.log({ hamburgerState })
+
   return (
     <Header isSubpage={!isHome} mobileMenu={hamburgerState}>
       <a className="site-identity" href="/">
@@ -29,11 +29,13 @@ const NavBar = ({ isHome }) => {
 }
 
 NavBar.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
+  isHome: PropTypes.Bool,
 }
 
 NavBar.defaultProps = {
-  siteTitle: ``
+  siteTitle: ``,
+  isHome: false,
 }
 
 export default NavBar
