@@ -10,19 +10,20 @@ class Resources extends Component {
 
     return (
       <>
-      <Layout />
-      {resourcesData.map(resource => {
-        const { id, title, description } = resource.node
+      <Layout>
+        {resourcesData.map(resource => {
+          const { id, title, description } = resource.node
 
-        return (
-          <div key={id} >
-            <Title text={title} />
-            {description.json.content.map(description => {
-              return <Description text={description.content[0].value}/>
-            })}
-          </div>
-        )
-      })}
+          return (
+            <div key={id} >
+              <Title text={title} />
+              {description.json.content.map(description => {
+                return <Description text={description.content[0].value}/>
+              })}
+            </div>
+          )
+        })}
+      </Layout>
       </>
     )
   }
@@ -35,8 +36,8 @@ export const resourcesQuery = graphql`
     allContentfulResources{
       edges {
         node {
-          id
           title
+          id
           description {
             json
           }

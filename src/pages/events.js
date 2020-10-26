@@ -13,17 +13,18 @@ class Events extends Component {
 
     return (
       <>
-        <Layout />
-        {eventsData.map(event => {
-          const { id, title, datetime, description } = event.node
-          return (
-            <div key={id} >
-              <Title text={title} />
-              <DateField date={datetime} />
-              <Description text={description.description} />
-            </div>
-          )
-        })}
+        <Layout>
+          {eventsData.map(event => {
+            const { id, title, datetime, description } = event.node
+            return (
+              <div key={id} >
+                <Title text={title} />
+                <DateField date={datetime} />
+                <Description text={description.description} />
+              </div>
+            )
+          })}
+        </Layout>
       </>
     )
   }
