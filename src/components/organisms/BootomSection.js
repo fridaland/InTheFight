@@ -1,16 +1,16 @@
 import React from "react"
-import FirstBootomSection from "../molecules/FirstBootomSection"
-import SecondBootomSection from "../molecules/SecondBootomSection"
+import FirstFooterSection from "../molecules/FirstFooterSection"
+import SecondFooterSection from "../molecules/SecondFooterSection"
 
 const BootomSection = ({
   firstContainerContent,
   secondContainerContent,
 }) => (
   <div>
-    <FirstBootomSection
+    <FirstFooterSection
       {...firstContainerContent}
     />
-    <SecondBootomSection
+    <SecondFooterSection
       {...secondContainerContent}
     />
   </div>
