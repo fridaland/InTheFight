@@ -14,31 +14,32 @@ class IndexPage extends Component {
 
     return (
       <>
-        <Layout />
-        <HomePageLogo />
-        {homepageData.map(data => {
-          const { title, simpleDescription } = data.node
-
-          return (
-            <div key={data.node.id}>
-              <Title text={title} />
-              <Description text={simpleDescription.simpleDescription} />
-            </div>
-          )
-        })}
-        <BootomSection
-          firstContainerContent={{
-            title: 'Header',
-            text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-            buttonText: 'ACTION',
-            buttonAction: () => console.log('firstContainer click')
-          }}
-          secondContainerContent={{
-            text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-            author: 'lorem Ipsum Author',
-            image: footerImage,
-          }}
-        />
+        <Layout>
+          <HomePageLogo />
+          {homepageData.map(data => {
+            const { title, simpleDescription } = data.node
+          
+            return (
+              <div key={data.node.id}>
+                <Title text={title} />
+                <Description text={simpleDescription.simpleDescription} />
+              </div>
+            )
+          })}
+          <BootomSection
+            firstContainerContent={{
+              title: 'Header',
+              text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+              buttonText: 'ACTION',
+              buttonAction: () => console.log('firstContainer click')
+            }}
+            secondContainerContent={{
+              text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+              author: 'lorem Ipsum Author',
+              image: footerImage,
+            }}
+          />
+        </Layout>
       </>
     )
   }
