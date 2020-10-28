@@ -5,6 +5,8 @@ import Title from "../components/atoms/title"
 import Description from "../components/atoms/description"
 import HomePageLogo from "../components/molecules/homePageLogo"
 
+import "../styles/index.css";
+
 class IndexPage extends Component {
   render() {
     const homepageData = this.props.data.allContentfulHomepageData.edges
@@ -14,13 +16,13 @@ class IndexPage extends Component {
         <Layout>
           <HomePageLogo />
           {homepageData.map(data => {
-            const { title, simpleDescription } = data.node
-          
+            const { title, simpleDescription, id } = data.node
+
             return (
-              <div key={data.node.id}>
-                <Title text={title} />
-                <Description text={simpleDescription.simpleDescription} />
-              </div>
+              <div className="headline-container" key={id}>
+                <Title className="headline" text={title} />
+                <Description className="headline-description" text={simpleDescription.simpleDescription} />
+              </div>          
             )
           })}
         </Layout>

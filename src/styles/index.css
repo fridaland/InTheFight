@@ -1,0 +1,23 @@
+.headline {
+    font-weight: bold;
+    font-size: 48px;
+    color: #2C358F;
+    margin: 0 20px 0 60px;
+}
+
+.headline-description {
+    font-size: 20px;
+    color: #000000;
+    width: 800px;
+    margin-top: 0;
+}
+
+.headline-container {
+    justify-content: space-between;
+    padding: 60px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
