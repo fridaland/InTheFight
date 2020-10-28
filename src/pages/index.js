@@ -13,18 +13,19 @@ class IndexPage extends Component {
 
     return (
       <>
-        <Layout />
-        <HomePageLogo />
-        {homepageData.map(data => {
-          const { title, simpleDescription } = data.node
+        <Layout>
+          <HomePageLogo />
+          {homepageData.map(data => {
+            const { title, simpleDescription, id } = data.node
 
-          return (
-            <div className="headline-container" key={data.node.id}>
-              <Title className="headline" text={title} />
-              <Description className="headline-description" text={simpleDescription.simpleDescription} />
-            </div>
-          )
-        })}
+            return (
+              <div className="headline-container" key={id}>
+                <Title className="headline" text={title} />
+                <Description className="headline-description" text={simpleDescription.simpleDescription} />
+              </div>          
+            )
+          })}
+        </Layout>
       </>
     )
   }

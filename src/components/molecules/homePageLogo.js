@@ -2,16 +2,13 @@ import React from "react"
 import { graphql, StaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
-import styled from "styled-components"
-
-import HomeBackground from "../../images/ITF-home-logo.png"
-import ITFLogo from "../../images/ITF-logo.png"
+import ITFLogo from "../../images/logos/ITF-logo.png"
 
 const HomePageLogo = () => (
   <StaticQuery
     query={graphql`
       query {
-        desktop: file(relativePath: { eq: "images/ITF-home-logo.png" }) {
+        desktop: file(relativePath: { eq: "images/logos/ITF-home-logo.png" }) {
           childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
@@ -37,7 +34,7 @@ const HomePageLogo = () => (
           fluid={imageData}
           backgroundColor={`#040e18`}
         >
-          <img src={ITFLogo} style={{margin: `0 35% 0 38%` }}/>
+          <img src={ITFLogo} alt='ITFLogo' style={{margin: `0 35% 0 38%` }}/>
         </BackgroundImage>
       )
     }}
