@@ -10,43 +10,46 @@ import homeImageA from "../images/home-images/home-image-a.png"
 import homeImageB from "../images/home-images/home-image-b.png"
 import homeImageC from "../images/home-images/home-image-c.png"
 
+import "../styles/index.css";
+
 class IndexPage extends Component {
   render() {
     const homepageData = this.props.data.allContentfulHomepageData.edges
 
     return (
       <>
-        <Layout />
-        <HomePageLogo />
-        {homepageData.map(data => {
-          const { title, simpleDescription } = data.node
+        <Layout>
+          <HomePageLogo />
+          {homepageData.map(data => {
+            const { title, simpleDescription, id } = data.node
 
-          return (
-            <div key={data.node.id}>
-              <Title text={title} />
-              <Description text={simpleDescription.simpleDescription} />
-            </div>
-          )
-        })}
-        <MiddleSection
-          sections={[
-            {
-              image: homeImageA,
-              title: 'Header',
-              text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-            },
-            {
-              image: homeImageB,
-              title: 'Header',
-              text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-            },
-            {
-              image: homeImageC,
-              title: 'Header',
-              text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-            },
-          ]}
-        />
+            return (
+              <div className="headline-container" key={id}>
+                <Title className="headline" text={title} />
+                <Description className="headline-description" text={simpleDescription.simpleDescription} />
+              </div>          
+            )
+          })}
+          <MiddleSection
+            sections={[
+              {
+                image: homeImageA,
+                title: 'Header',
+                text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+              },
+              {
+                image: homeImageB,
+                title: 'Header',
+                text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+              },
+              {
+                image: homeImageC,
+                title: 'Header',
+                text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+              },
+            ]}
+          />
+        </Layout>
       </>
     )
   }
