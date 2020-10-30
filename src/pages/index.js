@@ -4,7 +4,7 @@ import Layout from "../components/templates/layout"
 import Title from "../components/atoms/title"
 import Description from "../components/atoms/description"
 import HomePageLogo from "../components/molecules/homePageLogo"
-import BootomSection from "../components/organisms/BootomSection"
+import BottomSection from "../components/organisms/BottomSection"
 
 import footerImage from "../images/home-images/footer-image.png";
 
@@ -26,7 +26,7 @@ class IndexPage extends Component {
               </div>
             )
           })}
-          <BootomSection
+          <BottomSection
             firstContainerContent={{
               title: 'Header',
               text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
