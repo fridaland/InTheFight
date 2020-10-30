@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import ClickableIcon from "../atoms/ClickableIcon"
 
-import Mail from "../../images/logos/Mail.png"
+import Mail from "../../images/logos/mail.png"
 import Medium from "../../images/logos/medium.png"
 import Twitter from "../../images/logos/twitter.png"
 import Facebook from "../../images/logos/facebook.png"
@@ -15,7 +15,7 @@ const Icons = styled.div`
   align-items: flex-end;
   align-self: flex-end;
   a{
-  margin: 0 15px;  
+  margin: 0 15px;
   }
   @media(max-width: 360px){
     width: 100%;

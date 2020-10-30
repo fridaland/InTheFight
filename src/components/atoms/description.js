@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Description = ({text}) => (
-  <p data-testid="description">{text}</p>
+const Description = ({className, text}) => (
+  <p className={className} data-testid="description">{text}</p>
 )
 
 Description.propTypes = {
+  className: PropTypes.string,
   text: PropTypes.string,
 }
 
