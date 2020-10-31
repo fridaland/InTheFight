@@ -1,14 +1,10 @@
-import React from "react"
-import Layout from "../components/templates/layout"
+import React from 'react';
+import Layout from '../components/templates/layout';
 
-const ContactUs = () => {
-  return (
-    <>
-      <Layout>
-        Contact
-      </Layout>
-    </>
-  )
-}
+const ContactUs = () => (
+  <>
+    <Layout>Contact</Layout>
+  </>
+);
 
-export default ContactUs
+export default ContactUs;
