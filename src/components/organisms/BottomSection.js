@@ -12,9 +12,6 @@ const BottomSection = ({ firstContainerContent, secondContainerContent }) => (
   <StyledBottomSetion>
     <FirstFooterSection
       title={firstContainerContent.title}
-      text={firstContainerContent.text}
-      buttonText={firstContainerContent.buttonText}
-      buttonAction={firstContainerContent.buttonAction}
     />
     <SecondFooterSection
       text={secondContainerContent.text}
