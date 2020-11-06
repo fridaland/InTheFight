@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  height: 436px;
+  height: 460px;
   background: #2c358f;
   display: flex;
   justify-content: center;
