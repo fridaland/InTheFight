@@ -28,8 +28,11 @@
         "import"
     ],
     "rules": {
+        "import/first": "error",
         "no-console": "warn",
         "no-eval": "error",
-        "import/first": "error"
+	"react/jsx-filename-extension": "off",
+    "object-curly-newline": "off",
+    "prettier/prettier": "off"
     }
 }

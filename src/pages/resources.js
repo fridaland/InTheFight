@@ -1,48 +1,48 @@
-import React, { Component }  from "react"
-import Layout from "../components/templates/layout"
-import Description from "../components/atoms/description"
-import Title from "../components/atoms/title"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 
-class Resources extends Component {
+import Layout from '../components/templates/layout';
+import Title from '../components/atoms/title';
 
-  render() {
-    const resourcesData = this.props.data.allContentfulResources.edges
+const Resources = ({ data }) => {
+  const resourcesData = data.allContentfulResources.edges;
 
-    return (
-      <>
+  return (
+    <>
       <Layout>
-        {resourcesData.map(resource => {
-          const { id, title, description } = resource.node
+        {resourcesData.map((resource) => {
+          const { id, title } = resource.node;
 
           return (
-            <div key={id} >
+            <div key={id}>
               <Title text={title} />
-              {description.json.content.map(description => {
-                return <Description text={description.content[0].value}/>
-              })}
             </div>
-          )
+          );
         })}
       </Layout>
-      </>
-    )
-  }
-}
+    </>
+  );
+};
 
-export default Resources
+Resources.propTypes = {
+  data: PropTypes.node.isRequired,
+};
+
+export default Resources;
 
 export const resourcesQuery = graphql`
-  query resourcesQuery {
-    allContentfulResources{
+  query MyQuery {
+    allContentfulResources {
       edges {
         node {
-          title
-          id
           description {
             json
+            id
           }
+          title
         }
       }
     }
   }
-`
+`;

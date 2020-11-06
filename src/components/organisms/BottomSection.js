@@ -1,25 +1,28 @@
-import React from "react"
-import FirstFooterSection from "../molecules/FirstFooterSection"
-import SecondFooterSection from "../molecules/SecondFooterSection"
+import React from 'react';
+import PropTypes from 'prop-types';
+import FirstFooterSection from '../molecules/FirstFooterSection';
+import SecondFooterSection from '../molecules/SecondFooterSection';
 
-const BottomSection = ({
-  firstContainerContent,
-  secondContainerContent,
-}) => (
+const BottomSection = ({ firstContainerContent, secondContainerContent }) => (
   <div>
     <FirstFooterSection
-      {...firstContainerContent}
+      title={firstContainerContent.title}
+      text={firstContainerContent.text}
+      buttonText={firstContainerContent.buttonText}
+      buttonAction={firstContainerContent.buttonAction}
     />
     <SecondFooterSection
-      {...secondContainerContent}
+      text={secondContainerContent.text}
+      image={secondContainerContent.image}
+      author={secondContainerContent.author}
     />
   </div>
-)
+
+);
 
 BottomSection.propTypes = {
-}
+  firstContainerContent: PropTypes.node.isRequired,
+  secondContainerContent: PropTypes.node.isRequired,
+};
 
-BottomSection.defaultProps = {
-}
-
-export default BottomSection
+export default BottomSection;

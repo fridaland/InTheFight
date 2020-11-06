@@ -1,6 +1,6 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import { Styled } from "theme-ui"
+import React from 'react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Styled } from 'theme-ui';
 
 export default function Navigation() {
   const data = useStaticQuery(
@@ -15,22 +15,19 @@ export default function Navigation() {
           }
         }
       }
-    `
-  )
-  const navLinks = data.site.siteMetadata.menuLinks
+    `,
+  );
+  const navLinks = data.site.siteMetadata.menuLinks;
 
   return (
     <nav>
-      {navLinks.map(link => (
+      {navLinks.map((link) => (
         <li key={link.name}>
-          <Styled.a
-            as={Link}
-            to={link.url}
-          >
+          <Styled.a as={Link} to={link.url}>
             {link.name}
           </Styled.a>
         </li>
       ))}
     </nav>
-  )
+  );
 }

@@ -1,9 +1,10 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Footer from "../organisms/footer"
-import NavBar from "../organisms/navbar"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+import Footer from '../organisms/footer';
+import NavBar from '../organisms/navbar';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -12,15 +13,19 @@ const Layout = ({children}) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
       <NavBar siteTitle={data.site.siteMetadata.title} />
-        {children}
+      {children}
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Layout;

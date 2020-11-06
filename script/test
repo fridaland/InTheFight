@@ -15,6 +15,9 @@ then
 
     npm test
 
+    echo "Running eslint..."
+
+    npm run lint
 else
     echo "Running tests..."
     script/nix-npm test

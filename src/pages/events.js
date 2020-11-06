@@ -1,36 +1,38 @@
-import React, { Component } from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 
-import DateField from "../components/atoms/dateField"
-import Description from "../components/atoms/description"
-import Layout from "../components/templates/layout"
-import Title from "../components/atoms/title"
+import DateField from '../components/atoms/dateField';
+import Description from '../components/atoms/description';
+import Layout from '../components/templates/layout';
+import Title from '../components/atoms/title';
 
-class Events extends Component {
+const Events = ({ data }) => {
+  const eventsData = data.allContentfulEvents.edges;
 
-  render() {
-    const eventsData = this.props.data.allContentfulEvents.edges
+  return (
+    <>
+      <Layout>
+        {eventsData.map((event) => {
+          const { id, title, datetime, description } = event.node;
+          return (
+            <div key={id}>
+              <Title text={title} />
+              <DateField date={datetime} />
+              <Description text={description.description} />
+            </div>
+          );
+        })}
+      </Layout>
+    </>
+  );
+};
 
-    return (
-      <>
-        <Layout>
-          {eventsData.map(event => {
-            const { id, title, datetime, description } = event.node
-            return (
-              <div key={id} >
-                <Title text={title} />
-                <DateField date={datetime} />
-                <Description text={description.description} />
-              </div>
-            )
-          })}
-        </Layout>
-      </>
-    )
-  }
-}
+Events.propTypes = {
+  data: PropTypes.node.isRequired,
+};
 
-export default Events
+export default Events;
 
 export const eventsQuery = graphql`
   query eventsQuery {
@@ -47,4 +49,4 @@ export const eventsQuery = graphql`
       }
     }
   }
-`
+`;

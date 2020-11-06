@@ -1,23 +1,17 @@
-import React from "react"
-import { string } from "prop-types"
+import React from 'react';
+import { string } from 'prop-types';
 
-const MiddleSectionElement = ({
-  imagePosition,
-  image,
-  title,
-  text,
-}) => {
+const MiddleSectionElement = ({ imagePosition, image, title, text }) => {
   if (imagePosition === 'left') {
     return (
-      <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        marginTop: 100
-      }}>
-        <img
-          style={{ flex: 5, width: '100%' }}
-          src={image}
-        />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          marginTop: 100,
+        }}
+      >
+        <img style={{ flex: 5, width: '100%' }} src={image} alt="Brooklyn" />
         <div
           style={{
             flex: 4,
@@ -32,15 +26,17 @@ const MiddleSectionElement = ({
           <p>{text}</p>
         </div>
       </div>
-    )
+    );
   }
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'row',
-      marginTop: 100,
-    }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: 100,
+      }}
+    >
       <div
         style={{
           flex: 4,
@@ -55,26 +51,23 @@ const MiddleSectionElement = ({
         <h2>{title}</h2>
         <p>{text}</p>
       </div>
-      <img
-        style={{ flex: 5, width: '100%' }}
-        src={image}
-      />
+      <img style={{ flex: 5, width: '100%' }} src={image} alt="Brooklyn" />
     </div>
-  )
-}
+  );
+};
 
 MiddleSectionElement.propTypes = {
   imagePosition: string,
   image: string,
   title: string,
   text: string,
-}
+};
 
 MiddleSectionElement.defaultProps = {
   imagePosition: 'left',
   image: '',
   title: '',
   text: '',
-}
+};
 
-export default MiddleSectionElement
+export default MiddleSectionElement;
