@@ -6,7 +6,6 @@ import IconsPanel from '../molecules/iconsPanel';
 
 const FooterStyle = styled.div`
   margin: 0 auto;
-  max-width: 1280px;
   min-height: 140px;
   background-color: #faf5eb;
   color: #2c358f;
