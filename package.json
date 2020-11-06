@@ -62,7 +62,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
-    "lint": "eslint .",
+    "lint": "eslint src",
     "lint:fix": "eslint --fix"
   },
   "repository": {
