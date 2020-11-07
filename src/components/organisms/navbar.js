@@ -1,11 +1,11 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import Navigation from "../molecules/navigation"
-import { Header } from "../../styles/header-styles"
-import blueRingImage from "../../images/logos/ring-blue.png"
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import Navigation from '../molecules/navigation';
+import Header from '../../styles/header-styles';
+import blueRingImage from '../../images/logos/ring-blue.png';
 
 const NavBar = ({ isHome }) => {
-  const [hamburgerState, setHamburgerState] = useState(false)
+  const [hamburgerState, setHamburgerState] = useState(false);
 
   return (
     <Header isSubpage={!isHome} mobileMenu={hamburgerState}>
@@ -25,17 +25,17 @@ const NavBar = ({ isHome }) => {
         <div></div>
       </button>
     </Header>
-  )
-}
+  );
+};
 
 NavBar.propTypes = {
   siteTitle: PropTypes.string,
   isHome: PropTypes.bool,
-}
+};
 
 NavBar.defaultProps = {
   siteTitle: ``,
   isHome: false,
-}
+};
 
-export default NavBar
+export default NavBar;

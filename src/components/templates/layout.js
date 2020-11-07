@@ -22,15 +22,15 @@ const Layout = ({ children, isHome }) => {
       <Footer />
     </>
   );
-}
-  
+};
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   isHome: PropTypes.bool,
-}
+};
 
 Layout.defaultProps = {
   isHome: false,
-}
+};
 
 export default Layout;

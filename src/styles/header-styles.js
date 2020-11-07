@@ -1,7 +1,7 @@
 // For styled components in the HEADER
-import styled, { css } from "styled-components"
+import styled, { css } from 'styled-components';
 
-export const Header = styled.header`
+const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -170,4 +170,6 @@ export const Header = styled.header`
       padding: 3rem 1rem;
     }
   }
-`
+`;
+
+export default Header;
