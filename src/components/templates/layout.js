@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import NavBar from "../organisms/navbar"
@@ -18,7 +19,7 @@ const Layout = ({ isHome }) => {
 }
   
 Layout.propTypes = {
-  isHome: PropTypes.Bool,
+  isHome: PropTypes.bool,
 }
 
 Layout.defaultProps = {
