@@ -30,7 +30,7 @@ const NavBar = ({ isHome }) => {
 
 NavBar.propTypes = {
   siteTitle: PropTypes.string,
-  isHome: PropTypes.Bool,
+  isHome: PropTypes.bool,
 }
 
 NavBar.defaultProps = {
