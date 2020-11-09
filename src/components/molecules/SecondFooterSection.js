@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  min-height: 436px;
+  min-height: 460px;
+  overflow: hidden;
   width: 100%;
   position: relative;
 `;

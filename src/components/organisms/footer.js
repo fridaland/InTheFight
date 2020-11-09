@@ -5,7 +5,7 @@ import FooterText from '../molecules/footerText';
 import IconsPanel from '../molecules/iconsPanel';
 
 const FooterStyle = styled.div`
-  margin: 0 auto;
+  margin-top: 100px;
   min-height: 140px;
   background-color: #faf5eb;
   color: #2c358f;
