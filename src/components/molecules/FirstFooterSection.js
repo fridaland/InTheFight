@@ -46,6 +46,7 @@ const Button = styled.input`
   padding: 15px 40px 15px 40px;
   font-weight: bold;
   margin-top: 20px;
+  width: 310px;
 `;
 
 const FirstFooterSection = ({ title }) => {

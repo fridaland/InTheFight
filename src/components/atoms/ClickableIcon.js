@@ -13,9 +13,9 @@ const Icon = styled.img`
     SET blank to false
 */
 
-function IconsPanel({ link, img, href, alt, blank = true }) {
+function ClickableIcon({ link, img, href, alt, blank }) {
   return href ? (
-    <a a target={blank ? 'blank' : ''} href={href}>
+    <a target={blank ? 'blank' : ''} href={href}>
       <Icon src={img} alt={alt} />
     </a>
   ) : (
@@ -25,11 +25,16 @@ function IconsPanel({ link, img, href, alt, blank = true }) {
   );
 }
 
-IconsPanel.propTypes = {
-  link: PropTypes.string.isRequired,
-  img: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired,
+ClickableIcon.propTypes = {
   alt: PropTypes.string.isRequired,
-  blank: PropTypes.bool.isRequired,
+  blank: PropTypes.bool,
+  href: PropTypes.string,
+  img: PropTypes.node.isRequired,
+  link: PropTypes.string.isRequired,
 };
-export default IconsPanel;
+
+ClickableIcon.defaultProps = {
+  blank: true,
+  href: '',
+};
+export default ClickableIcon;
