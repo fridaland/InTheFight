@@ -19,22 +19,21 @@ const NavBar = ({ isHome }) => {
 
       <button
         id="hamburger-menu"
-        onClick={() => setHamburgerState(prevState => !prevState)}
+        type="button"
+        onClick={() => setHamburgerState((prevState) => !prevState)}
       >
-        <div></div>
-        <div></div>
+        <div />
+        <div />
       </button>
     </Header>
   );
 };
 
 NavBar.propTypes = {
-  siteTitle: PropTypes.string,
   isHome: PropTypes.bool,
 };
 
 NavBar.defaultProps = {
-  siteTitle: ``,
   isHome: false,
 };
 

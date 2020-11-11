@@ -32,9 +32,8 @@ const Header = styled.header`
     }
   }
 
-  ${props =>
-    props.isSubpage &&
-    css`
+  ${(props) => props.isSubpage
+    && css`
       .nav-wrapper {
         display: flex;
         justify-content: flex-end;
@@ -130,9 +129,8 @@ const Header = styled.header`
       display: block;
     }
 
-    ${props =>
-      props.mobileMenu &&
-      css`
+    ${(props) => props.mobileMenu
+      && css`
         .nav-wrapper {
           opacity: 1;
           visibility: visible;

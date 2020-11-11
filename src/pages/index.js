@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
     <>
       <Layout isHome>
         <HomePageLogo />
-        {homepageData.map(homeData => {
+        {homepageData.map((homeData) => {
           const { title, simpleDescription, id } = homeData.node;
           return (
             <HomeHeadlineSection
