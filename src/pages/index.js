@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <Layout>
+      <Layout isHome>
         <HomePageLogo />
         {homepageData.map((homeData) => {
           const { title, simpleDescription, id } = homeData.node;
