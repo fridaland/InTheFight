@@ -32,8 +32,7 @@ const Header = styled.header`
     }
   }
 
-  ${(props) => props.isSubpage
-    && css`
+  ${(props) => props && css`
       .nav-wrapper {
         display: flex;
         justify-content: flex-end;

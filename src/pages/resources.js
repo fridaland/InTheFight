@@ -9,19 +9,17 @@ const Resources = ({ data }) => {
   const resourcesData = data.allContentfulResources.edges;
 
   return (
-    <>
-      <Layout>
-        {resourcesData.map((resource) => {
-          const { id, title } = resource.node;
+    <Layout>
+      {resourcesData.map((resource) => {
+        const { id, title } = resource.node;
 
-          return (
-            <div key={id}>
-              <Title text={title} />
-            </div>
-          );
-        })}
-      </Layout>
-    </>
+        return (
+          <div key={id}>
+            <Title text={title} />
+          </div>
+        );
+      })}
+    </Layout>
   );
 };
 

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import Navigation from '../molecules/navigation';
 import Header from '../../styles/header-styles';
 import blueRingImage from '../../images/logos/ring-blue.png';
 
-const NavBar = ({ isHome }) => {
+const NavBar = () => {
   const [hamburgerState, setHamburgerState] = useState(false);
 
   return (
-    <Header isSubpage={!isHome} mobileMenu={hamburgerState}>
+    <Header mobileMenu={hamburgerState}>
       <a className="site-identity" href="/">
         <h1>In the fight</h1>
         <img src={blueRingImage} alt="blue ring" />
@@ -27,14 +26,6 @@ const NavBar = ({ isHome }) => {
       </button>
     </Header>
   );
-};
-
-NavBar.propTypes = {
-  isHome: PropTypes.bool,
-};
-
-NavBar.defaultProps = {
-  isHome: false,
 };
 
 export default NavBar;

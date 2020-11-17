@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Footer from '../organisms/footer';
 import NavBar from '../organisms/navbar';
 
-const Layout = ({ children, isHome }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -17,7 +17,7 @@ const Layout = ({ children, isHome }) => {
 
   return (
     <>
-      <NavBar isHome={isHome} siteTitle={data.site.siteMetadata.title} />
+      <NavBar siteTitle={data.site.siteMetadata.title} />
       {children}
       <Footer />
     </>
@@ -26,11 +26,9 @@ const Layout = ({ children, isHome }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  isHome: PropTypes.bool,
 };
 
 Layout.defaultProps = {
-  isHome: false,
 };
 
 export default Layout;
