@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
-
 import styled from 'styled-components';
+
+import Button from '../atoms/button';
 
 const Container = styled.div`
   height: 460px;
@@ -38,15 +39,6 @@ const Input = styled.input`
   padding: 15px;
   margin-left: 5px;
   margin-top: 10px;
-`;
-
-const Button = styled.input`
-  background: #faf5eb;
-  color: #2c358f;
-  padding: 15px 40px 15px 40px;
-  font-weight: bold;
-  margin-top: 20px;
-  width: 310px;
 `;
 
 const FirstFooterSection = ({ title }) => {
@@ -98,7 +90,7 @@ const FirstFooterSection = ({ title }) => {
           Email:
           <Input type="text" name="email" onChange={handleEmailChange} />
         </Label>
-        <Button type="submit" value="Submit" />
+        <Button text="Submit" color="white" />
       </Form>
       {postSubmitMessage ? <Label>{postSubmitMessage}</Label> : null}
     </Container>

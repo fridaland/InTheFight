@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Displays a formatted date 1`] = `
+exports[`Displays a button 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <p
-        data-testid="date-field"
+      <button
+        class="sc-bdnylx jZEJNP"
       >
-        Fri Mar 20 2020
-      </p>
+        Submit
+      </button>
     </div>
   </body>,
   "container": <div>
-    <p
-      data-testid="date-field"
+    <button
+      class="sc-bdnylx jZEJNP"
     >
-      Fri Mar 20 2020
-    </p>
+      Submit
+    </button>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
