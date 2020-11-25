@@ -7,6 +7,6 @@ import DateField from '../../src/components/atoms/dateField';
 test('Displays a formatted date', () => {
   const dateField = render(<DateField date="March 20 2020" />);
 
-  expect(screen.getByTestId('date-field')).toHaveTextContent('Fri Mar 20 2020');
+  expect(screen.getByTestId('date-field')).toHaveTextContent('Friday, March 20, 2020');
   expect(dateField).toMatchSnapshot();
 });

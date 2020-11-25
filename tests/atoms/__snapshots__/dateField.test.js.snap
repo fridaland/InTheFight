@@ -5,19 +5,37 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <p
-        data-testid="date-field"
+      <div
+        class="sc-bdnylx bwGHBC"
       >
-        Fri Mar 20 2020
-      </p>
+        <img
+          alt="Calendar"
+          class="sc-gtssRu kZvURF"
+          src=""
+        />
+        <p
+          data-testid="date-field"
+        >
+          Friday, March 20, 2020
+        </p>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <p
-      data-testid="date-field"
+    <div
+      class="sc-bdnylx bwGHBC"
     >
-      Fri Mar 20 2020
-    </p>
+      <img
+        alt="Calendar"
+        class="sc-gtssRu kZvURF"
+        src=""
+      />
+      <p
+        data-testid="date-field"
+      >
+        Friday, March 20, 2020
+      </p>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

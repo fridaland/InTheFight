@@ -39,6 +39,7 @@ const Input = styled.input`
   padding: 15px;
   margin-left: 5px;
   margin-top: 10px;
+  font-size: medium;
 `;
 
 const FirstFooterSection = ({ title }) => {

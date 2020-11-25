@@ -35,8 +35,7 @@ export const resourcesQuery = graphql`
       edges {
         node {
           description {
-            json
-            id
+            description
           }
           title
         }

@@ -6,7 +6,6 @@ const BlueTitle = styled.h1`
   font-weight: bold;
   font-size: 48px;
   color: #2C358F;
-  margin: 0 20px 0 60px;
 `;
 
 const Title = ({ color, text }) => {

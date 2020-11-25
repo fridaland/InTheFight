@@ -33,15 +33,13 @@ const SocalMedia = styled.div`
   flex-wrap: wrap-reverse;
 `;
 
-const Footer = () => {
-  return (
-    <FooterStyle>
-      <FooterText />
-      <SocalMedia>
-        <Copyright> &#169;2020</Copyright>
-        <IconsPanel />
-      </SocalMedia>
-    </FooterStyle>
-  );
-};
+const Footer = () => (
+  <FooterStyle>
+    <FooterText />
+    <SocalMedia>
+      <Copyright> &#169;2020</Copyright>
+      <IconsPanel />
+    </SocalMedia>
+  </FooterStyle>
+);
 export default Footer;

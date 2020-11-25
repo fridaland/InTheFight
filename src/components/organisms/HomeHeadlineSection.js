@@ -14,7 +14,7 @@ const HeadlineContainer = styled.div`
 const TitleContainer = styled.div`
   flex: 5 1 0%;
   width: 100%;
-  margin-top: 30px;
+  margin: 0 20px 0 60px;;
 `;
 
 const DescriptionContainer = styled.div`
