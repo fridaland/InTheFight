@@ -9,28 +9,33 @@ import DateField from '../atoms/dateField';
 import Location from '../atoms/location';
 
 const Form = styled.form`
+  color: '#2C358F';
   display: flex;
   flex-direction: column;
   font-size: 30px;
-  color: '#2C358F';
-  margin: 40px 0px 0px 20px;
+  margin: 40px 0px 0px 95px;
+
+  & div {
+    width: 180px;
+  }
 `;
 
 const Input = styled.input`
-  height: 27px;
-  width: 200px;
-  margin-left: 20px;
   font-size: large;
+  height: 27px;
+  margin-left: 20px;
+  width: 400px;
 `;
 
 const Label = styled.label`
+  display: flex;
   margin: 10px 0 10px 0;
 `;
 
 const DateLocation = styled.div`
   display: grid;
-  margin-left: 112px;
   grid-template-columns: auto auto auto;
+  margin-left: 112px;
 `;
 
 const EventInfoContainer = styled.div`
@@ -38,23 +43,43 @@ const EventInfoContainer = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  margin-top: 20px;
+  margin-top: inherit;
+
+  & input {
+    margin-left: 110px;
+    width: 500px !important;
+  }
 `;
 
 const ModalDescription = styled.div`
-  margin: 20px 22px 0 22px;
+  margin: 20px 50px 0 50px;
 `;
 
 const VirtualText = styled.p`
+  font-weight: bold;
   margin: 10px;
-  font-style: bold;
 `;
+
+const VirtualContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  & span {
+    &:first-child {
+      padding-top: 2px;
+    }
+
+    &:last-child {
+      padding-top: 4px;
+    }
+  }
+`
 
 const EventsModal = ({ isOpen, onRequestClose, title, description, date, location, virtual }) => {
   const styles = {
     content: {
-      height: '600px',
-      width: '700px',
+      height: '700px',
+      width: '900px',
       margin: 'auto auto',
       background: '#FAF5EB',
     },
@@ -69,7 +94,7 @@ const EventsModal = ({ isOpen, onRequestClose, title, description, date, locatio
       <EventInfoContainer>
         <Title text={title} color="blue" />
         {virtual ? (
-          <>
+          <VirtualContainer>
             <span aria-label="computer-emoji" role="img">
               👩🏻‍💻
             </span>
@@ -77,7 +102,7 @@ const EventsModal = ({ isOpen, onRequestClose, title, description, date, locatio
             <span aria-label="computer-emoji" role="img">
               👨🏽‍💻
             </span>
-          </>
+          </VirtualContainer>
         ) : null}
         <DateLocation>
           <DateField date={date} />
@@ -90,19 +115,19 @@ const EventsModal = ({ isOpen, onRequestClose, title, description, date, locatio
 
       <Form>
         <Label>
-          First Name
+          <div>First Name</div>
           <Input type="text" name="name" onChange="" />
         </Label>
         <Label>
-          Last Name
+          <div>Last Name</div>
           <Input type="text" name="name" onChange="" />
         </Label>
         <Label>
-          Email
+          <div>Email</div>
           <Input type="text" name="email" onChange="" />
         </Label>
         <Label>
-          Zip Code
+          <div>Zip Code</div>
           <Input type="text" name="email" onChange="" />
         </Label>
         <ButtonContainer>
